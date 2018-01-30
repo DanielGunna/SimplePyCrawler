@@ -20,7 +20,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-
 import sys
 reload(sys)
 sys.setdefaultencoding("utf8")
@@ -31,9 +30,6 @@ import urllib3
 
 #Lista de adj 
 lista_adj = {}
-
-
-
 
 #=========================================#
 #Metodo para pegar os links  de uma url   #
@@ -93,7 +89,9 @@ def principal(url,saltos):
 			# chama funcao recursivamente para cada link passando saltos - um 		
 			principal(i,saltos -1)
 		
-	
+#========================================================================#
+#Metodo que verifica se uma url  valida                                  #
+#========================================================================#	
 def is_valid_url(url):
     import re
     regex = re.compile(
@@ -104,15 +102,6 @@ def is_valid_url(url):
         r'(?::\d+)?'  # optional port
         r'(?:/?|[/?]\S+)$', re.IGNORECASE)
     return url is not None and regex.search(url)
-
-
-
-
-
-
-
-
-
 
 #========================================================================#
 #Metodo para remover url invalidas de uma lista de urls                  #
@@ -125,7 +114,9 @@ def remove(lista):
 				lista[i] = "NULL"	
 	
 	return lista
-
+#========================================================================#
+#Metodo para printar resultados                                          #
+#========================================================================#
 def printar():
 	
 	for i in lista_adj:
@@ -135,40 +126,10 @@ def printar():
 	print "\nLista  total :"
 	print lista_adj.keys()
 		
-
-
-
+#Ler url		
 url = raw_input('Entre com a  url (adicione http:// ao inicio) : ') 
+#Ler numero de saltos
 salto = int(raw_input('Entre com o numero de saltos : ')) 
 
 principal(url,salto)
 printar()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
