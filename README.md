@@ -1,12 +1,16 @@
 # SimplePyCrawler
 
-A simple web crawler developed as coursework for Algorithms on Graph Theory - PUC Minas 
+A simple web crawler developed as coursework for Graph Algorithms - PUC Minas 
 
 
-# What's this supposed to do ?
+## What is this supposed to do?
 
-This simple script make requests to get hyperlinks contained on a [HTML(Hypertext Markup Language)](https://en.wikipedia.org/wiki/HTML) page from a specified domain. The main objective is to build a graph where nodes represents the hyperlinks and there is edge between two nodes when the hyperlinks represented by those nodes references each other. The process of build the graph is recursive, so the new hyperlinks added to graph will be visited and the hyperlinks contained on HTML pages referenced by those hyperlinks will be added to graph and visited and so on... this recursive process will occur until the script complete a specified number of jumps, thus the number of jumps controls how recursion can be more "deepiest". The approach used to represent the graph was the [Adjacency List](https://en.wikipedia.org/wiki/Adjacency_list) approach. The new hyperlinks will be always added on the end of the list, so the way that script handles the visit to fetch of new HTML pages is the strategy of [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) Algorithm.
+This simple script crawl hyperlinks contained on a [HTML(Hypertext Markup Language)](https://en.wikipedia.org/wiki/HTML) page from a specified domain and then it fetches the hyperlinked pages to construct a graph. The graph nodes represents the hyperlinks and the egdges indicates that there is a hyperlink reference from one page to another one (this is a directed graph). 
 
-# How it works ?
+- **How is the graph built?** The graph is built recursively in such a way that new referenced pages are visited to search for more hyperlinks and further extend the graph. This recursive process occurs until the script complete a previously specified number of jumps. 
 
-All that you need to do is run the script, using python interpreter typing the command  ```python SimplePyCrawler.py``` on a terminal, then you'll be asked to insert an url to be processed and the number of jumps.
+- **How is the graph structured?** This approach uses an [Adjacency List](https://en.wikipedia.org/wiki/Adjacency_list) to represent the graph. New hyperlinks are always added at the end of the adjacency list and thus. The hyperlinks are added following the [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) Algorithm strategy.
+
+## How does it work?
+
+All that you need to do is to run the script using python interpreter and type the command ```python SimplePyCrawler.py``` on a terminal, then you'll be asked to insert an url to be processed and how many jumps you want the graph to consider.
