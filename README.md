@@ -12,21 +12,21 @@ This simple script crawl hyperlinks contained on a [HTML(Hypertext Markup Langua
 
 ## How does it work?
 
-The python package manager [pip](https://pip.pypa.io/en/stable/) its required to configure the environment to use this script, because it will be used to install project's dependencies. The required dependecies are listed below:
+The python package manager [pip](https://pip.pypa.io/en/stable/) is required to configure the environment to use this script, because it will be used to install project's dependencies. The required dependecies are listed below:
 
 - [BeautifulSoup 4](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 - [urllib3](https://urllib3.readthedocs.io/en/latest/)
 
-Before run the configuration script ```config_env.sh```, you need to provide permission to run it by typing command ```chmod +x config_env.sh``` on a terminal. After that, you'll type ```./config_env.sh``` to run the configuration script then you'll must provide user's password, because script may require root privileges. Finally, wait for process conclude with success, certifying that errors not ocurred.
+Before running the ```config_env.sh``` configuration script you need to provide permission to run it by typing ```chmod +x config_env.sh``` in a terminal. Afterwards, you have to type ```./config_env.sh``` to run the configuration script, which requires user's password because it is a procedure that may require root privileges. Finally, wait for process conclude.
 
-After execute all previous steps, you simply need to execute script, using a python interpreter typing the command ```python SimplePyCrawler.py``` on a terminal, then you'll be asked to insert an url to be processed and how many jumps you want the graph to consider.
+After you have executed all previous steps, you simply need to execute script using a python interpreter by typing the ```python SimplePyCrawler.py``` command in a terminal. Then, you will be asked to insert an url to be processed and choose how many jumps you want the graph to consider.
 
 ## Todo 
 
-I not intend to mantain this script anymore, but if you want to start to contribute or want to use this script on your project, below i sugest some enhancements.
+I do not intend to mantain this script anymore. If you want to contribute or simply would like to use this script on your project,  below there are some enhancements suggestions.
   
-  * Implement a most robust method to verify if an URL is valid;
-  * Handle cycles on graph;
-  * Implement some politeness policies on the fetch of HTML documents (such as process robots.txt, intervals between requests etc.) to avoid banning from web servers;
-  * Handle fetch of urls that generate double edges.
+  * Implement a more robust method to verify if an URL is valid;
+  * Handle graph cycles;
+  * Implement politeness in the HTML documents fetching process (such as respecting robots.txt and adding some time before repating requests) to avoid having your bot/IP banned from web servers;
+  * Handle url fetching that generates double edges.
  
