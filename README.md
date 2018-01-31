@@ -14,8 +14,6 @@ This simple script crawl hyperlinks contained on a [HTML(Hypertext Markup Langua
 
 All that you need to do is to run the script using python interpreter and type the command ```python SimplePyCrawler.py``` on a terminal, then you'll be asked to insert an url to be processed and how many jumps you want the graph to consider.
  
-All that you need to do is run the script, using python interpreter typing the command  ```python SimplePyCrawler.py``` on a terminal, then you'll be asked to insert an url to be processed and the number of jumps.
-
 # Todo 
 
 I not intend to mantain this script anymore, but if you want to start to contribute or want to use this script on your project, below i sugest some enhancements.
