@@ -4,7 +4,7 @@ A simple web crawler developed as coursework for Graph Algorithms - PUC Minas
 
 ## What is this supposed to do?
  
-This simple script crawl hyperlinks contained on a [HTML(Hypertext Markup Language)](https://en.wikipedia.org/wiki/HTML) page from a specified domain and then it fetches the hyperlinked pages to construct a graph. The graph nodes represents the hyperlinks and the egdges indicates that there is a hyperlink reference from one page to another one (this is a directed graph). 
+This simple script crawl hyperlinks contained on a [HTML(Hypertext Markup Language)](https://en.wikipedia.org/wiki/HTML) page from a specified domain and then it fetches the hyperlinked pages to construct a graph. The graph nodes represents the hyperlinks and the egdges indicates that there is a hyperlink reference from one page to another one (this is a [directed graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)#Directed_graph)). 
  
 - **How is the graph built?** The graph is built recursively in such a way that new referenced pages are visited to search for more hyperlinks and further extend the graph. This recursive process occurs until the script complete a previously specified number of jumps. 
 
