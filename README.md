@@ -12,7 +12,14 @@ This simple script crawl hyperlinks contained on a [HTML(Hypertext Markup Langua
 
 ## How does it work?
 
-All that you need to do is to run the script using python interpreter and type the command ```python SimplePyCrawler.py``` on a terminal, then you'll be asked to insert an url to be processed and how many jumps you want the graph to consider.
+The python package manager [pip](https://pip.pypa.io/en/stable/) its required to configure the environment to use this script, because it will be used to install project's dependencies. The required dependecies are listed below:
+
+- [BeautifulSoup 4](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+- [urllib3](https://urllib3.readthedocs.io/en/latest/)
+
+Before run the configuration script ```config_env.sh```, you need to provide permission to run it by typing command ```chmod +x config_env.sh``` on a terminal. After that, you'll type ```./config_env.sh``` to run the configuration script then you'll must provide user's password, because script may require root privileges. Finally, wait for process conclude with success, certifying that errors not ocurred.
+
+After execute all previous steps, you simply need to execute script, using a python interpreter typing the command ```python SimplePyCrawler.py``` on a terminal, then you'll be asked to insert an url to be processed and how many jumps you want the graph to consider.
 
 ## Todo 
 
